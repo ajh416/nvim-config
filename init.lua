@@ -1,7 +1,9 @@
 vim.cmd[[set termguicolors]]
 vim.cmd[[set number]]
-vim.cmd[[colorscheme everforest]]
 
 -- IMPORTS (lua/)
 require("plugins")
 require("remap")
+
+vim.cmd[[colorscheme kanagawa]]
+vim.cmd("colorscheme kanagawa-wave")

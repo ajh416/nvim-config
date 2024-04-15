@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
 	use {
 		'neanias/everforest-nvim'
 	}
+
+	use 'rebelot/kanagawa.nvim'
 	
 	-- Nice status line
 	use {
@@ -31,7 +33,7 @@ return require('packer').startup(function(use)
 
 	-- Fuzzy finder
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		'nvim-telescope/telescope.nvim', tag = '0.1.6',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
