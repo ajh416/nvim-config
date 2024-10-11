@@ -11,4 +11,3 @@ vim.cmd("colorscheme everforest")
 --vim.cmd("colorscheme kanagawa-wave")
 
 vim.opt.shell = '/usr/bin/zsh'
-
