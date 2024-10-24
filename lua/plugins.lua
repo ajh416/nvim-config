@@ -10,6 +10,16 @@ return {
 		lazy = false,
 	},
 
+	{
+		'scottmckendry/cyberdream.nvim',
+		lazy = false,
+		priority = 1000,
+	},
+
+	{
+		'EdenEast/nightfox.nvim',
+	},
+
 	-- Nice status line
 	{
 		'nvim-lualine/lualine.nvim',
@@ -42,8 +52,22 @@ return {
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
 
+	{
+    		"nvim-neo-tree/neo-tree.nvim",
+    		branch = "v3.x",
+    		dependencies = {
+      			"nvim-lua/plenary.nvim",
+      			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      			"MunifTanjim/nui.nvim",
+      			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    		}
+	},
+
 	-- Syntax highlighter
 	{ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
+
+	-- shows progress notifications etc
+	{ "j-hui/fidget.nvim" },
 
 	-- LSP setup in after/plugin/lsp.lua
 	{ 'williamboman/mason.nvim' },
