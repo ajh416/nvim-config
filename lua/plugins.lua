@@ -21,6 +21,10 @@ return {
 		'EdenEast/nightfox.nvim',
 	},
 
+	{
+		'rmehri01/onenord.nvim',
+	},
+
 	-- Nice status line
 	{
 		'nvim-lualine/lualine.nvim',
@@ -28,12 +32,28 @@ return {
 	},
 
 	{
+		'MeanderingProgrammer/render-markdown.nvim',
+		dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
+	},
+
+	-- Shows indents
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
+		opts = {},
+	},
+
+	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
 		event = "InsertEnter",
-		config = function()
-			require("copilot").setup()
-		end
 	},
 
 	{
@@ -64,6 +84,7 @@ return {
 		}
 	},
 
+	-- LSP Section
 	{
 		"folke/trouble.nvim",
 		opts = {}, -- for default options, refer to the configuration section for custom setup.
@@ -100,18 +121,6 @@ return {
 				desc = "Quickfix List (Trouble)",
 			},
 		},
-
-	},
-
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-		}
 	},
 
 	-- Syntax highlighter
@@ -136,6 +145,9 @@ return {
 	{ 'hrsh7th/cmp-buffer' },                           
 	{ 'hrsh7th/vim-vsnip' },
 
-	-- might work
-	{ 'simrat39/rust-tools.nvim' },
+	{
+		'mrcjkb/rustaceanvim',
+		version = '^5', -- Recommended
+		lazy = false, -- This plugin is already lazy
+	}
 }
