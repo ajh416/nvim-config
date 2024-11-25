@@ -10,7 +10,7 @@ require("remap")
 --vim.cmd[[colorscheme kanagawa]]
 --vim.cmd("colorscheme kanagawa-wave")
 --vim.cmd("colorscheme cyberdream")
---vim.cmd("colorscheme carbonfox")
+vim.cmd("colorscheme carbonfox")
 
 -- With no other theme set, this is default
 --vim.cmd("colorscheme onenord")
