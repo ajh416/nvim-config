@@ -5,15 +5,9 @@ return {
 		lazy = false,
 	},
 
-	{ 
-		'rebelot/kanagawa.nvim', 
-		lazy = false,
-	},
-
 	{
-		'scottmckendry/cyberdream.nvim',
+		'rebelot/kanagawa.nvim',
 		lazy = false,
-		priority = 1000,
 	},
 
 	{
@@ -138,8 +132,8 @@ return {
 	{ 'hrsh7th/cmp-nvim-lsp' },
 
 	-- Useful completion sources:
-	{ 'hrsh7th/cmp-path' },                              
-	{ 'hrsh7th/cmp-buffer' },                           
+	{ 'hrsh7th/cmp-path' },
+	{ 'hrsh7th/cmp-buffer' },
 
 	{
 		'mrcjkb/rustaceanvim',

@@ -25,6 +25,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
 		vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
 		vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+		vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
 		vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
 		vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
 		vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
@@ -72,15 +73,18 @@ cmp.setup({
 	},
 })
 
+local noop = function() end
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
 	-- Replace the language servers listed here
 	-- with the ones you want to install
-	ensure_installed = { 'lua_ls', 'rust_analyzer', 'clangd' },
+	ensure_installed = { 'lua_ls', 'clangd', 'pyright' },
 	handlers = {
 		function(server_name)
 			require('lspconfig')[server_name].setup({})
 		end,
+		rust_analyzer = noop,
 	},
 })
 
