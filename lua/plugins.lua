@@ -19,6 +19,10 @@ return {
 		'rmehri01/onenord.nvim',
 	},
 
+	{
+		'navarasu/onedark.nvim',
+	},
+
 	-- Nice status line
 	{
 		'nvim-lualine/lualine.nvim',
