@@ -11,8 +11,9 @@ require("remap")
 --vim.cmd("colorscheme kanagawa-wave")
 --vim.cmd("colorscheme carbonfox")
 --vim.cmd("colorscheme terafox")
-vim.cmd("colorscheme nightfox")
+--vim.cmd("colorscheme nightfox")
 --vim.cmd("colorscheme onedark") -- adjust the style in after/plugin/onedark.lua
+vim.cmd("colorscheme cyberdream")
 
 -- With no other theme set, this is default
 --vim.cmd("colorscheme onenord")

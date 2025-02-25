@@ -23,6 +23,12 @@ return {
 		'navarasu/onedark.nvim',
 	},
 
+	{
+		"scottmckendry/cyberdream.nvim",
+		lazy = false,
+		priority = 1000,
+	},
+
 	-- Nice status line
 	{
 		'nvim-lualine/lualine.nvim',
@@ -72,9 +78,9 @@ return {
 	},
 
 	{
-    		"ThePrimeagen/harpoon",
-    		branch = "harpoon2",
-    		dependencies = { "nvim-lua/plenary.nvim" }
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" }
 	},
 
 	{
