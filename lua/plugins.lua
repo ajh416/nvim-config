@@ -143,8 +143,14 @@ return {
 		end
 	},
 
-	-- Syntax highlighter
-	{ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
+	{
+  		"nvim-treesitter/nvim-treesitter",
+  		build = ":TSUpdate",
+  		opts = {
+  		  ensure_installed = { "lua", "python", "bash" },
+  		  highlight = { enable = true },
+  		},
+	},
 
 	-- LSP setup in after/plugin/lsp.lua
 	{ 'williamboman/mason.nvim' },
