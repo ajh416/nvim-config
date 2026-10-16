@@ -142,7 +142,6 @@ return {
 				'markdown', 'markdown_inline', 'latex',
 				'javascript', 'typescript', 'html', 'css', 'json',
 			})
-
 			vim.api.nvim_create_autocmd('FileType', {
 				desc = 'Start treesitter highlighting when a parser exists',
 				callback = function(args)
