@@ -19,4 +19,6 @@ vim.cmd("colorscheme cyberdream")
 --vim.cmd("colorscheme onenord")
 
 -- SET THE SHELL, JUST IN CASE
-vim.opt.shell = '/usr/bin/zsh'
+--vim.opt.shell = '/usr/bin/zsh'
+-- This one is MacOS specific
+vim.opt.shell = '/bin/zsh'
